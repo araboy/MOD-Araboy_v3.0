@@ -193,7 +193,7 @@
 		;Trapped Th GUI
 		 $y+= 25
 		 $x -= 105
-	     $lblDetectTrapedTH = GUICtrlCreateLabel("Trapped TH ", $x -10 , $y + 5, -1, 17, $SS_LEFT)
+	     $lblDetectTrapedTH = GUICtrlCreateLabel(GetTranslated(4,122,"Trapped TH "), $x -10 , $y + 5, -1, 17, $SS_LEFT)
          $cmbDetectTrapedTH = GUICtrlCreateCombo("",  $x + 80, $y, 120, 21, BitOR($CBS_DROPDOWNLIST, $CBS_AUTOHSCROLL))
 	     GUICtrlSetData(-1, "1:Dont Detect|2:Attack All In|3:Skip base", "1:Dont Detect")
 	     GUICtrlSetOnEvent(-1, "chkSnipeMode")
