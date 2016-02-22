@@ -100,6 +100,7 @@ EndFunc   ;==>chkABRandomSpeedAtk
 
 Func btnMilkingOptions()
 	OpenGUIMilk2()
+	MilkingPosChange() ; Call Func for RTL language (change Milking Options Tab position)
 EndFunc
 
 Func cmbABDeploy()

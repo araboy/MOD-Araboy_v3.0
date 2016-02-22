@@ -124,7 +124,7 @@ SetLog("Android Emulator Configuration: " & $Android & ($AndroidInstance <> "" ?
 AdlibRegister("PushBulletRemoteControl", $PBRemoteControlInterval)
 AdlibRegister("PushBulletDeleteOldPushes", $PBDeleteOldPushesInterval)
 
-
+Getchatid() ; receive Telegram chat id and send keyboard
 RTLLang() ; Check Language For RTL all object and ...
 
 CheckDisplay() ; verify display size and DPI (Dots Per Inch) setting

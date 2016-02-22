@@ -7,6 +7,11 @@ Global $txtAttackMinesifGold,$txtAttackMinesifElixir, $txtAttackMinesifDarkElixi
 Global $txtLowerXWave, $txtUpperXWave, $txtLowerDelayWaves, $txtUpperDelayWaves, $txtMaxWaves
 ;Global $chkSnipeMilkTH, $txtMaxTilesMilk, $cmbMilkSnipeAlgorithm, $chkSnipeIfNoElixir
 Global $grpMilkingDebug ,$chkMilkingDebugIMG, $chkMilkingDebugFullSearch
+Global $grpExtractorOptions, $grpIfFoundElixir, $grpAttackResourcesIf, $grpTroopsToUse, $grpMilkingDebug, $grpMilkingLegend
+Global $lblLvl4, $lblLvl5, $lblLvl6, $lblLvl7, $lblLvl8, $lblLvl9, $lblLvl10, $lblLvl11, $lblLvl12
+Global $lblRedlineResDistance, $lblTroopXWave, $lblMaxWave, $lblDelayBtwnWaves
+Global $lblLegend0, $lblLegend1, $lblLegend2, $lblLegend3, $lblLegend4
+Global $picLegend0, $picLegend1, $picLegend2, $picLegend3, $picLegend4, $btnMilkSaveExit, $lblTroopXWave2, $lblDelayBtwnWaves2
 
 Func GUIMilk()
 	$hMilkGUI = GUICreate(GetTranslated(16,1, "Milking Options"), 380, 536, 85, 60, -1, $WS_EX_MDICHILD, $frmbot)
@@ -100,7 +105,7 @@ Func GUIMilk()
 	$y = 367
 	$lblTroopXWave = GUICtrlCreateLabel(GetTranslated(16,22, "- Troop X Wave:"),$x, $y)
 	$txtLowerXWave = GUICtrlCreateInput("", 180, $y-7, 37,21)
-	GUICtrlCreateLabel("-", 228, $y)
+	$lblTroopXWave2 = GUICtrlCreateLabel("-", 228, $y)
 	$txtUpperXWave = GUICtrlCreateInput("", 245, $y-7, 37,21)
 	$y +=20
 	$lblMaxWave = GUICtrlCreateLabel(GetTranslated(16,23, "- Max Waves:"),$x, $y)
@@ -108,7 +113,7 @@ Func GUIMilk()
 	$y +=20
 	$lblDelayBtwnWaves = GUICtrlCreateLabel(GetTranslated(16,24, "- Delay Between Waves:"),$x, $y)
 	$txtLowerDelayWaves = GUICtrlCreateInput("", 180, $y-7, 37,21)
-	GUICtrlCreateLabel("-", 228, $y)
+	$lblDelayBtwnWaves2 = GUICtrlCreateLabel("-", 228, $y)
 	$txtUpperDelayWaves = GUICtrlCreateInput("", 245, $y-7, 37,21)
 
 ;~ 	$grpSnipeOutsideTHAtEnd = GUICtrlCreateGroup(GetTranslated(16,25, "5. Snipe Outside TH At End Of Attack"), 9, 452,280,111)
@@ -155,7 +160,7 @@ Func GUIMilk()
 	$y += 20
     $picLegend3 = GUICtrlCreatePic(@ScriptDir & "\Images\CapacityStructure\elixir_8_3_70_A.bmp", $x , $y, 25, 25 )
 	$y += 35
-	$lblLegend0 = GUICtrlCreateLabel(GetTranslated(16,36, "90-100%"),$x, $y)
+	$lblLegend4 = GUICtrlCreateLabel(GetTranslated(16,36, "90-100%"),$x, $y)
 	$y += 20
     $picLegend4 = GUICtrlCreatePic(@ScriptDir & "\Images\CapacityStructure\elixir_8_4_70_A.bmp", $x , $y, 25, 25 )
 	$y += 35
